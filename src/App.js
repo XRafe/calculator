@@ -184,7 +184,7 @@ function App() {
                 <div className="App-text-style">
                     Сфера ИНДИВИДУАЛЬНОСТИ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" width="300" height="600">
+                        <svg viewBox="0 0 550 1000" className="App-other-list">
                             <Element />
                         </svg>
 
@@ -210,7 +210,7 @@ function App() {
                 <div className="App-text-style">
                     Сфера ОСОЗНАННОСТИ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" width="300" height="600">
+                        <svg viewBox="0 0 550 1000" className="App-other-list">
                             <Element />
                         </svg>
 
@@ -236,7 +236,7 @@ function App() {
                 <div className="App-text-style">
                     Сфера РЕАЛИЗАЦИИ ДЕНЕГ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" width="300" height="600">
+                        <svg viewBox="0 0 550 1000" className="App-other-list">
                             <Element />
                         </svg>
 
@@ -262,7 +262,7 @@ function App() {
                 <div className="App-text-style">
                     Сфера ОТНОШЕНИЙ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" width="300" height="600">
+                        <svg viewBox="0 0 550 1000" className="App-other-list">
                             <Element />
                         </svg>
 
@@ -288,7 +288,7 @@ function App() {
                 <div className="App-text-style">
                     Сфера ЗДОРОВЬЯ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" width="300" height="600">
+                        <svg viewBox="0 0 550 1000" className="App-other-list">
                             <Element />
                         </svg>
 
@@ -317,7 +317,7 @@ function App() {
                         <div>
                             {num10}, {num20} - по отцовской линии
                             <br/>
-                            {num5}, {num15} - по материнской линии линии
+                            {num5}, {num15} - по материнской линии
                         </div>
                     </div>
                 </div>
@@ -332,6 +332,8 @@ function App() {
                     <div>
                         <div>{num26} {num27} {num28}</div>
                     </div>
+                    <br/>
+                    <br/>
                 </div>
             </div>
         </Box>
