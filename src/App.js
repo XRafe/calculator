@@ -1,7 +1,10 @@
 import './App.css';
-import {Box, TextField} from "@mui/material";
+import {Box} from "@mui/material";
 import {useState} from "react";
 import { ReactComponent as Element } from './element.svg';
+import { ReactComponent as ListLine } from './line.svg';
+import {DateField, LocalizationProvider} from "@mui/x-date-pickers";
+import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 
 function App() {
 
@@ -35,13 +38,17 @@ function App() {
     let [num28, setNum28] = useState(28);
 
     function getDataToFields(e) {
-        let tempNum8 = new Date(e.target.value).getUTCDate();
+        if (document.getElementById('dateField') != null)
+            if (document.getElementById('dateField').ariaInvalid == 'true')
+                return;
+
+        let tempNum8 = parseInt(e.target.value.split('.')[0]);
         setNum8(tempNum8);
 
-        let tempNum13 = new Date(e.target.value).getUTCMonth() + 1;
+        let tempNum13 = parseInt(e.target.value.split('.')[1]);
         setNum13(tempNum13);
 
-        let tempNum17 = firstRule(new Date(e.target.value).getUTCFullYear());
+        let tempNum17 = firstRule(parseInt(e.target.value.split('.')[2]));
         setNum17(tempNum17);
 
         let tempNum23 = firstRule(tempNum8 + tempNum13 + tempNum17);
@@ -131,7 +138,7 @@ function App() {
         >
 
             <div className="App">
-                <div onBlur={getDataToFields}>
+                <div onKeyUp={getDataToFields}>
                     {datePicker()}
                 </div>
 
@@ -150,6 +157,10 @@ function App() {
                     </svg>
                     <svg viewBox="0 0 550 1000" className="App-five-list">
                         <Element />
+                    </svg>
+
+                    <svg viewBox="0 0 550 1000" className="App-list-line">
+                        <ListLine />
                     </svg>
 
                     <div className="App-general-label1">{num1}</div>
@@ -181,80 +192,88 @@ function App() {
                     <div className="App-general-combo-label">{num26} {num27} {num28}</div>
                 </div>
 
-                <div className="App-text-style">
-                    Сфера ИНДИВИДУАЛЬНОСТИ
+                <div style={{marginTop: '350px'}} className="App-text-style">
+                    Сфера<br/>ИНДИВИДУАЛЬНОСТИ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" className="App-other-list">
-                            <Element />
-                        </svg>
-
-                        <div className="App-label1">{num7}</div>
-                        <div className="App-label2">{num8}</div>
-                        <div className="App-label3">{num9}</div>
-                        <div className="App-label4">{num6}</div>
-                        <div className="App-label5">{num5}</div>
-                        <div className="App-label6">{num10}</div>
-                        <div className="App-combo-label">{num26} {num27} {num28}</div>
-
                         <div>
+                            <svg viewBox="0 0 550 1000" className="App-other-list">
+                                <Element />
+                            </svg>
+
+                            <div className="App-label1">{num7}</div>
+                            <div className="App-label2">{num8}</div>
+                            <div className="App-label3">{num9}</div>
+                            <div className="App-label4">{num6}</div>
+                            <div className="App-label5">{num5}</div>
+                            <div className="App-label6">{num10}</div>
+                            <div className="App-combo-label">{num26} {num27} {num28}</div>
+                        </div>
+
+                        <div className="App-text-lower-style">
                             {num8} - основное предназначение
                             <br/>
                             {num6} - основной урок
                             <br/>
                             {num7}, {num9} - уроки
-                            <br/>
+                            <br/><br/>
                             {num5}, {num10} - родовые ошибки
                         </div>
                     </div>
                 </div>
                 <div className="App-text-style">
-                    Сфера ОСОЗНАННОСТИ
+                    Сфера<br/>ОСОЗНАННОСТИ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" className="App-other-list">
-                            <Element />
-                        </svg>
-
-                        <div className="App-label1">{num11}</div>
-                        <div className="App-label2">{num13}</div>
-                        <div className="App-label3">{num12}</div>
-                        <div className="App-label4">{num14}</div>
-                        <div className="App-label5">{num10}</div>
-                        <div className="App-label6">{num15}</div>
-                        <div className="App-combo-label">{num26} {num27} {num28}</div>
-
                         <div>
+                            <svg viewBox="0 0 550 1000" className="App-other-list">
+                                <Element />
+                            </svg>
+
+                            <div className="App-label1">{num11}</div>
+                            <div className="App-label2">{num13}</div>
+                            <div className="App-label3">{num12}</div>
+                            <div className="App-label4">{num14}</div>
+                            <div className="App-label5">{num10}</div>
+                            <div className="App-label6">{num15}</div>
+                            <div className="App-combo-label">{num26} {num27} {num28}</div>
+                        </div>
+
+                        <div className="App-text-lower-style">
                             {num13} - основное предназначение
                             <br/>
                             {num14} - основной урок
                             <br/>
                             {num11}, {num12} - уроки
-                            <br/>
+                            <br/><br/>
                             {num10}, {num15} - родовые ошибки
                         </div>
                     </div>
                 </div>
                 <div className="App-text-style">
-                    Сфера РЕАЛИЗАЦИИ ДЕНЕГ
+                    Сфера<br/>РЕАЛИЗАЦИИ ДЕНЕГ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" className="App-other-list">
-                            <Element />
-                        </svg>
-
-                        <div className="App-label1">{num16}</div>
-                        <div className="App-label2">{num17}</div>
-                        <div className="App-label3">{num18}</div>
-                        <div className="App-label4">{num19}</div>
-                        <div className="App-label5">{num15}</div>
-                        <div className="App-label6">{num20}</div>
-                        <div className="App-combo-label">{num26} {num27} {num28}</div>
-
                         <div>
+
+                            <svg viewBox="0 0 550 1000" className="App-other-list">
+                                <Element />
+                            </svg>
+
+                            <div className="App-label1">{num16}</div>
+                            <div className="App-label2">{num17}</div>
+                            <div className="App-label3">{num18}</div>
+                            <div className="App-label4">{num19}</div>
+                            <div className="App-label5">{num15}</div>
+                            <div className="App-label6">{num20}</div>
+                            <div className="App-combo-label">
+                                {num26} {num27} {num28}
+                            </div>
+                        </div>
+                        <div className="App-text-lower-style">
                             {num17} - основное предназначение
                             <br/>
                             {num19} - основной урок
                             <br/>
                             {num16}, {num18} - уроки
-                            <br/>
+                            <br/><br/>
                             {num15}, {num20} - родовые ошибки
                         </div>
                     </div>
@@ -262,25 +281,28 @@ function App() {
                 <div className="App-text-style">
                     Сфера ОТНОШЕНИЙ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" className="App-other-list">
-                            <Element />
-                        </svg>
-
-                        <div className="App-label1">{num22}</div>
-                        <div className="App-label2">{num23}</div>
-                        <div className="App-label3">{num24}</div>
-                        <div className="App-label4">{num21}</div>
-                        <div className="App-label5">{num20}</div>
-                        <div className="App-label6">{num25}</div>
-                        <div className="App-combo-label">{num26} {num27} {num28}</div>
-
                         <div>
+                            <svg viewBox="0 0 550 1000" className="App-other-list">
+                                <Element />
+                            </svg>
+
+                            <div className="App-label1">{num22}</div>
+                            <div className="App-label2">{num23}</div>
+                            <div className="App-label3">{num24}</div>
+                            <div className="App-label4">{num21}</div>
+                            <div className="App-label5">{num20}</div>
+                            <div className="App-label6">{num25}</div>
+                            <div className="App-combo-label">
+                                {num26} {num27} {num28}
+                            </div>
+                        </div>
+                        <div className="App-text-lower-style">
                             {num23} - основное предназначение
                             <br/>
                             {num21} - основной урок
                             <br/>
                             {num22}, {num24} - уроки
-                            <br/>
+                            <br/><br/>
                             {num20}, {num25} - родовые ошибки
                         </div>
                     </div>
@@ -288,50 +310,71 @@ function App() {
                 <div className="App-text-style">
                     Сфера ЗДОРОВЬЯ
                     <div className="App-list-general">
-                        <svg viewBox="0 0 550 1000" className="App-other-list">
-                            <Element />
-                        </svg>
-
-                        <div className="App-label1">{num3}</div>
-                        <div className="App-label2">{num1}</div>
-                        <div className="App-label3">{num2}</div>
-                        <div className="App-label4">{num4}</div>
-                        <div className="App-label5">{num25}</div>
-                        <div className="App-label6">{num5}</div>
-                        <div className="App-combo-label">{num26} {num27} {num28}</div>
-
                         <div>
+                            <svg viewBox="0 0 550 1000" className="App-other-list">
+                                <Element />
+                            </svg>
+
+                            <div className="App-label1">{num3}</div>
+                            <div className="App-label2">{num1}</div>
+                            <div className="App-label3">{num2}</div>
+                            <div className="App-label4">{num4}</div>
+                            <div className="App-label5">{num25}</div>
+                            <div className="App-label6">{num5}</div>
+                            <div className="App-combo-label">
+                                {num26} {num27} {num28}
+                            </div>
+                        </div>
+                        <div className="App-text-lower-style">
                             {num1} - основное предназначение
                             <br/>
                             {num4} - основной урок
                             <br/>
                             {num3}, {num2} - уроки
-                            <br/>
+                            <br/><br/>
                             {num25}, {num5} - родовые ошибки
                         </div>
                     </div>
                 </div>
                 <div className="App-text-style">
-                    Родовые ошибки
-                    <div>
-                        <div>
-                            {num10}, {num20} - по отцовской линии
-                            <br/>
-                            {num5}, {num15} - по материнской линии
-                        </div>
+                    <label>Родовые ошибки</label>
+                    <div style={{marginTop: 2}} className="App-text-lower-style">
+                        <br/>
+                        {num10}, {num20} - по отцовской линии
+                        <br/>
+                        <br/>
+                        {num5}, {num15} - по материнской линии
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
                 <div className="App-text-style">
-                    Ошибка прошлых воплощений
-                    <div>
-                        <div>{num25}</div>
+                    <label>Ошибка<br/>прошлых воплощений</label>
+                    <div style={{marginTop: 2}} className="App-text-lower-style">
+                        <br/>
+                        {num25}
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
                 <div className="App-text-style">
-                    Код миссии души
-                    <div>
-                        <div>{num26} {num27} {num28}</div>
+                    Код Миссии Души
+                    <div style={{marginTop: 2}} className="App-text-lower-style">
+                        <br/>
+                        {num26} {num27} {num28}
                     </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                     <br/>
                     <br/>
                 </div>
@@ -343,24 +386,21 @@ function App() {
 function datePicker() {
     return (
         <div className="App-date-picker">
-            <TextField
-                id="date"
-                label="Введите дату рождения"
-                type="date"
-                variant="standard"
-                color="warning"
-                focused
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                InputProps={{
-                    inputProps: {
-                        style: {
-                            color: 'white',
-                        }
-                    }
-                }}
-            />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DateField
+                    sx={{
+                        input: { color: 'white' },
+                        label: { color: 'white' }
+                    }}
+                    id="dateField"
+                    label="Дата рождения"
+                    format="DD.MM.YYYY"
+                    focused
+                    InputLabelProps={{
+                        shrink: true
+                    }}
+                />
+            </LocalizationProvider>
         </div>
     )
 }

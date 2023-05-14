@@ -8,8 +8,24 @@
 
 }
 
-.App-list-general {
+.App-list-line {
+  position: relative;
+  right: 1210px;
+  top: 835px;
+
+  width: 480px;
+  height: 920px;
+}
+
+.App-text-lower-style {
   margin-top: 10%;
+  font-size: 25px;
+}
+
+.App-list-general {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .App-text-style {
@@ -17,14 +33,13 @@
   color: white;
   font-size: 300%;
   font-style: italic;
-  margin-top: 10%;
   position: relative;
   left: 50px;
 }
 
 .App-list-container {
   margin-left: 40px;
-  margin-top: 50px;
+  margin-top: -200px;
   display: flex;
   align-items: baseline;
   color: white;
@@ -91,35 +106,39 @@
 
 .App-label1 {
   position: relative;
-  bottom: 520px;
+  bottom: 530px;
   right: 10px;
-  font-size: 25px;
+  font-size: 30px;
   display: flex;
+  text-align: center;
 }
 
 .App-label2 {
   position: relative;
-  bottom: 660px;
+  bottom: 670px;
   left: 65px;
-  font-size: 25px;
+  font-size: 30px;
   display: flex;
+  text-align: center;
 }
 
 .App-label3 {
   position: relative;
-  bottom: 590px;
+  bottom: 610px;
   left: 140px;
-  font-size: 25px;
+  font-size: 30px;
   display: flex;
+  text-align: center;
 
 }
 
 .App-label4 {
   position: relative;
-  bottom: 450px;
+  bottom: 480px;
   left: 65px;
-  font-size: 25px;
+  font-size: 30px;
   display: flex;
+  text-align: center;
 }
 
 .App-label5 {
@@ -128,6 +147,7 @@
   right: 30px;
   font-size: 25px;
   display: flex;
+  text-align: center;
 }
 
 .App-label6 {
@@ -136,6 +156,7 @@
   left: 170px;
   font-size: 25px;
   display: flex;
+  text-align: center;
 }
 
 .App-combo-label {
@@ -150,15 +171,16 @@
 .App-general-label1 {
   position: relative;
   bottom: 150px;
-  right: 1500px;
+  right: 1990px;
   width: 30px;
   text-align: center;
+  font-size: 35px;
 }
 
 .App-general-label2 {
   position: relative;
   bottom: 200px;
-  right: 1450px;
+  right: 1950px;
   width: 30px;
   text-align: center;
 }
@@ -166,23 +188,23 @@
 .App-general-label3 {
   position: relative;
   bottom: 50px;
-  right: 1480px;
+  right: 1980px;
   width: 30px;
   text-align: center;
 }
 
 .App-general-label4 {
   position: relative;
-  bottom: 150px;
-  right: 1370px;
+  bottom: 130px;
+  right: 1835px;
   width: 30px;
   text-align: center;
 }
 
 .App-general-label5 {
   position: relative;
-  bottom: 220px;
-  right: 1340px;
+  bottom: 230px;
+  right: 1890px;
   width: 30px;
   text-align: center;
 }
@@ -190,7 +212,7 @@
 .App-general-label6 {
   position: relative;
   bottom: 280px;
-  right: 1360px;
+  right: 1830px;
   width: 30px;
   text-align: center;
 }
@@ -198,7 +220,7 @@
 .App-general-label7 {
   position: relative;
   bottom: 340px;
-  right: 1560px;
+  right: 2040px;
   width: 30px;
   text-align: center;
 }
@@ -206,23 +228,24 @@
 .App-general-label8 {
   position: relative;
   bottom: 450px;
-  right: 1600px;
+  right: 2080px;
   width: 30px;
   text-align: center;
+  font-size: 35px;
 }
 
 .App-general-label9 {
   position: relative;
   bottom: 440px;
-  right: 1500px;
+  right: 1980px;
   width: 30px;
   text-align: center;
 }
 
 .App-general-label10 {
   position: relative;
-  bottom: 310px;
-  right: 1370px;
+  bottom: 370px;
+  right: 1905px;
   width: 30px;
   text-align: center;
 }
@@ -230,7 +253,7 @@
 .App-general-label11 {
   position: relative;
   bottom: 500px;
-  right: 1430px;
+  right: 1910px;
   width: 30px;
   text-align: center;
 }
@@ -238,7 +261,7 @@
 .App-general-label12 {
   position: relative;
   bottom: 500px;
-  right: 1315px;
+  right: 1795px;
   width: 30px;
   text-align: center;
 }
@@ -246,23 +269,24 @@
 .App-general-label13 {
   position: relative;
   bottom: 585px;
-  right: 1415px;
+  right: 1900px;
   width: 30px;
   text-align: center;
+  font-size: 35px;
 }
 
 .App-general-label14 {
   position: relative;
   bottom: 340px;
-  right: 1450px;
+  right: 1930px;
   width: 30px;
   text-align: center;
 }
 
 .App-general-label15 {
   position: relative;
-  bottom: 290px;
-  right: 1380px;
+  bottom: 375px;
+  right: 1855px;
   width: 30px;
   text-align: center;
 }
@@ -270,7 +294,7 @@
 .App-general-label16 {
   position: relative;
   bottom: 440px;
-  right: 1300px;
+  right: 1780px;
   width: 30px;
   text-align: center;
 }
@@ -278,15 +302,16 @@
 .App-general-label17 {
   position: relative;
   bottom: 460px;
-  right: 1220px;
+  right: 1700px;
   width: 30px;
   text-align: center;
+  font-size: 35px;
 }
 
 .App-general-label18 {
   position: relative;
   bottom: 350px;
-  right: 1250px;
+  right: 1730px;
   width: 30px;
   text-align: center;
 }
@@ -294,15 +319,15 @@
 .App-general-label19 {
   position: relative;
   bottom: 275px;
-  right: 1450px;
+  right: 1930px;
   width: 30px;
   text-align: center;
 }
 
 .App-general-label20 {
   position: relative;
-  bottom: 170px;
-  right: 1440px;
+  bottom: 230px;
+  right: 1860px;
   width: 30px;
   text-align: center;
 }
@@ -310,7 +335,7 @@
 .App-general-label21 {
   position: relative;
   bottom: 125px;
-  right: 1440px;
+  right: 1930px;
   width: 30px;
   text-align: center;
 }
@@ -318,7 +343,7 @@
 .App-general-label22 {
   position: relative;
   bottom: 200px;
-  right: 1300px;
+  right: 1780px;
   width: 30px;
   text-align: center;
 }
@@ -326,23 +351,24 @@
 .App-general-label23 {
   position: relative;
   bottom: 150px;
-  right: 1260px;
+  right: 1740px;
   width: 30px;
   text-align: center;
+  font-size: 35px;
 }
 
 .App-general-label24 {
   position: relative;
   bottom: 55px;
-  right: 1360px;
+  right: 1840px;
   width: 30px;
   text-align: center;
 }
 
 .App-general-label25 {
   position: relative;
-  top: 20px;
-  right: 1780px;
+  top: 30px;
+  right: 2260px;
   width: 30px;
   text-align: center;
 }
@@ -352,184 +378,251 @@
   text-align: center;
   position: relative;
   bottom: 70px;
-  right: 1890px;
+  right: 2370px;
+  font-size: 35px;
 }
 
 @media screen and (max-width : 768px) {
   .App-text-style {
     left: -50px;
+    font-size: 20px;
   }
   .App {
     font-size: 7px;
     justify-items: normal;
   }
   .App-list-container {
-    margin-left: -5px;
+    margin-left: -15px;
+    font-size: 13px;
   }
   .App-date-picker {
-    margin-left: 5%;
+    margin-left: 3%;
   }
   .App-one-list {
-    width: 125px;
+    width: 100px;
     height: 250px;
-    top: 100px;
+    top: 99px;
     left: 70px;
   }
   .App-two-list {
-    width: 125px;
+    width: 100px;
     height: 250px;
-    top: 58px;
-    left: -13px;
+    top: 65px;
+    left: 3px;
   }
   .App-three-list {
-    width: 125px;
+    width: 100px;
     height: 250px;
-    top: 58px;
-    left: -79px;
+    top: 64px;
+    left: -50px;
   }
   .App-four-list {
-    width: 125px;
+    width: 100px;
     height: 250px;
-    top: 100px;
-    left: -162px;
+    top: 97px;
+    left: -116px;
   }
   .App-five-list {
-    width: 125px;
+    width: 100px;
     height: 250px;
-    top: 159px;
-    left: -287px;
-  }
-  .App-list-container {
-    font-size: 15px;
+    top: 145px;
+    left: -215px;
   }
   .App-general-label1 {
-    bottom: 10px;
-    right: 620px;
+    bottom: -5px;
+    right: 660px;
+    font-size: 18px;
   }
 
   .App-general-label2 {
     bottom: 25px;
-    right: 615px;
+    right: 655px;
   }
 
   .App-general-label3 {
-    top: 40px;
-    right: 650px;
+    top: 35px;
+    right: 685px;
   }
 
   .App-general-label4 {
-    top: 5px;
-    right: 615px;
+    top: 2px;
+    right: 660px;
   }
 
   .App-general-label5 {
-    bottom: 35px;
-    right: 630px;
+    bottom: 30px;
+    right: 700px;
   }
 
   .App-general-label6 {
-    bottom: 65px;
-    right: 645px;
+    bottom: 50px;
+    right: 700px;
   }
 
   .App-general-label7 {
-    bottom: 85px;
-    right: 755px;
+    bottom: 70px;
+    right: 790px;
   }
 
   .App-general-label8 {
-    bottom: 130px;
-    right: 785px;
+    bottom: 110px;
+    right: 825px;
+    font-size: 18px;
   }
 
   .App-general-label9 {
-    bottom: 125px;
-    right: 765px;
-  }
-
-  .App-general-label10 {
-    bottom: 60px;
-    right: 720px;
-  }
-
-  .App-general-label11 {
-    bottom: 150px;
-    right: 770px;
-  }
-
-  .App-general-label12 {
-    bottom: 150px;
-    right: 735px;
-  }
-
-  .App-general-label13 {
-    bottom: 190px;
-    right: 800px;
-  }
-
-  .App-general-label14 {
-    bottom: 80px;
+    bottom: 108px;
     right: 815px;
   }
 
+  .App-general-label10 {
+    bottom: 90px;
+    right: 810px;
+  }
+
+  .App-general-label11 {
+    bottom: 125px;
+    right: 830px;
+  }
+
+  .App-general-label12 {
+    bottom: 128px;
+    right: 806px;
+  }
+
+  .App-general-label13 {
+    bottom: 160px;
+    right: 860px;
+    font-size: 18px;
+  }
+
+  .App-general-label14 {
+    bottom: 65px;
+    right: 893px;
+  }
+
   .App-general-label15 {
-    bottom: 50px;
-    right: 820px;
+    bottom: 85px;
+    right: 887px;
   }
 
   .App-general-label16 {
-    bottom: 130px;
-    right: 800px;
+    bottom: 108px;
+    right: 880px;
   }
 
   .App-general-label17 {
-    bottom: 130px;
-    right: 780px;
+    bottom: 110px;
+    right: 865px;
+    font-size: 18px;
   }
 
   .App-general-label18 {
     bottom: 75px;
-    right: 810px;
+    right: 900px;
   }
 
   .App-general-label19 {
     bottom: 45px;
-    right: 910px;
+    right: 995px;
   }
 
   .App-general-label20 {
-    bottom: 10px;
-    right: 935px;
+    bottom: 35px;
+    right: 980px;
   }
 
   .App-general-label21 {
-    top: 20px;
-    right: 945px;
+    top: 1px;
+    right: 1035px;
   }
 
   .App-general-label22 {
     bottom: 25px;
-    right: 915px;
+    right: 1005px;
   }
 
   .App-general-label23 {
-    bottom: 10px;
-    right: 915px;
+    top: 5px;
+    right: 995px;
+    font-size: 18px;
   }
 
   .App-general-label24 {
-    top: 40px;
-    right: 970px;
+    top: 25px;
+    right: 1065px;
   }
 
   .App-general-label25 {
-    top: 80px;
-    right: 1160px;
+    top: 60px;
+    right: 1220px;
   }
 
   .App-general-combo-label {
-    top: 40px;
-    right: 1270px;
+    top: 25px;
+    right: 1335px;
+    font-size: 14px;
+  }
+
+  .App-other-list {
+    width: 120px;
+    height: 250px;
+  }
+  .App-label1 {
+    bottom: 220px;
+    right: 15px;
+    font-size: 20px;
+  }
+
+  .App-label2 {
+    bottom: 300px;
+    left: 25px;
+    font-size: 20px;
+  }
+
+  .App-label3 {
+    bottom: 275px;
+    left: 57px;
+    font-size: 20px;
+  }
+
+  .App-label4 {
+    bottom: 235px;
+    left: 20px;
+    font-size: 20px;
+  }
+
+  .App-label5 {
+    bottom: 245px;
+    right: 17px;
+    font-size: 15px;
+  }
+
+  .App-label6 {
+    bottom: 265px;
+    left: 65px;
+    font-size: 15px;
+  }
+
+  .App-combo-label {
+    bottom: 180px;
+    font-size: 15px;
+    left: 5px;
+  }
+
+  .App-list-general {
+    grid-template-columns: 8% 20%;
+  }
+
+  .App-text-lower-style {
+    font-size: 12px;
+  }
+  .App-list-line {
+    right: 380px;
+    top: 418px;
+
+    width: 162px;
+    height: 500px;
   }
 }
 
@@ -540,6 +633,12 @@
     justify-items: normal;
   }
   .App-text-style {
-    margin-left: 100px;
+    margin-left: 90px;
+  }
+  .App-list-general {
+    grid-template-columns: 8% 20%;
+  }
+  .App-list-container {
+    margin-left: 10px;
   }
 }
