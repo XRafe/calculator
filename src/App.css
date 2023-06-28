@@ -1,7 +1,7 @@
 .App {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
-  background-image: url("/img/background.png");
+  background-image: url("/img/background.jpg");
   background-size: cover;
   overflow: hidden;
   justify-items: left;

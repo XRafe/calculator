@@ -8,41 +8,42 @@ import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 
 function App() {
 
-    let [num1, setNum1] = useState(1);
-    let [num2, setNum2] = useState(2);
-    let [num3, setNum3] = useState(3);
-    let [num4, setNum4] = useState(4);
-    let [num5, setNum5] = useState(5);
-    let [num6, setNum6] = useState(6);
-    let [num7, setNum7] = useState(7);
-    let [num8, setNum8] = useState(8);
-    let [num9, setNum9] = useState(9);
-    let [num10, setNum10] = useState(10);
-    let [num11, setNum11] = useState(11);
-    let [num12, setNum12] = useState(12);
-    let [num13, setNum13] = useState(13);
-    let [num14, setNum14] = useState(14);
-    let [num15, setNum15] = useState(15);
-    let [num16, setNum16] = useState(16);
-    let [num17, setNum17] = useState(17);
-    let [num18, setNum18] = useState(18);
-    let [num19, setNum19] = useState(19);
-    let [num20, setNum20] = useState(20);
-    let [num21, setNum21] = useState(21);
-    let [num22, setNum22] = useState(22);
-    let [num23, setNum23] = useState(23);
-    let [num24, setNum24] = useState(24);
-    let [num25, setNum25] = useState(25);
-    let [num26, setNum26] = useState(26);
-    let [num27, setNum27] = useState(27);
-    let [num28, setNum28] = useState(28);
+    let [num1, setNum1] = useState();
+    let [num2, setNum2] = useState();
+    let [num3, setNum3] = useState();
+    let [num4, setNum4] = useState();
+    let [num5, setNum5] = useState();
+    let [num6, setNum6] = useState();
+    let [num7, setNum7] = useState();
+    let [num8, setNum8] = useState();
+    let [num9, setNum9] = useState();
+    let [num10, setNum10] = useState();
+    let [num11, setNum11] = useState();
+    let [num12, setNum12] = useState();
+    let [num13, setNum13] = useState();
+    let [num14, setNum14] = useState();
+    let [num15, setNum15] = useState();
+    let [num16, setNum16] = useState();
+    let [num17, setNum17] = useState();
+    let [num18, setNum18] = useState();
+    let [num19, setNum19] = useState();
+    let [num20, setNum20] = useState();
+    let [num21, setNum21] = useState();
+    let [num22, setNum22] = useState();
+    let [num23, setNum23] = useState();
+    let [num24, setNum24] = useState();
+    let [num25, setNum25] = useState();
+    let [num26, setNum26] = useState();
+    let [num27, setNum27] = useState();
+    let [num28, setNum28] = useState();
+
 
     function getDataToFields(e) {
         if (document.getElementById('dateField') != null)
             if (document.getElementById('dateField').ariaInvalid == 'true')
                 return;
 
-        let tempNum8 = parseInt(e.target.value.split('.')[0]);
+        let tempNum8 = firstRule(parseInt(e.target.value.split('.')[0]));
         setNum8(tempNum8);
 
         let tempNum13 = parseInt(e.target.value.split('.')[1]);
@@ -54,7 +55,7 @@ function App() {
         let tempNum23 = firstRule(tempNum8 + tempNum13 + tempNum17);
         setNum23(tempNum23);
 
-        let tempNum1 = firstRule(tempNum23*2);
+        let tempNum1 = firstRule(tempNum8 + tempNum13 + tempNum17 + tempNum23);
         setNum1(tempNum1);
 
         let tempNum5 = firstRule(tempNum1 + tempNum8);
