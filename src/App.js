@@ -1,10 +1,12 @@
 import './App.css';
-import {Box} from "@mui/material";
+import {Box, ThemeProvider} from "@mui/material";
 import {useState} from "react";
 import { ReactComponent as Element } from './element.svg';
-import { ReactComponent as ListLine } from './line.svg';
+import { ReactComponent as ContainerList } from './container-list.svg';
 import {DateField, LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
+import { createTheme } from '@mui/material/styles';
+
 
 function App() {
 
@@ -40,7 +42,7 @@ function App() {
 
     function getDataToFields(e) {
         if (document.getElementById('dateField') != null)
-            if (document.getElementById('dateField').ariaInvalid == 'true')
+            if (document.getElementById('dateField').ariaInvalid === 'true')
                 return;
 
         let tempNum8 = firstRule(parseInt(e.target.value.split('.')[0]));
@@ -144,24 +146,8 @@ function App() {
                 </div>
 
                 <div className="App-list-container">
-                    <svg viewBox="0 0 550 1000" className="App-one-list">
-                        <Element />
-                        </svg>
-                    <svg viewBox="0 0 550 1000" className="App-two-list">
-                        <Element />
-                    </svg>
-                    <svg viewBox="0 0 550 1000" className="App-three-list">
-                        <Element />
-                    </svg>
-                    <svg viewBox="0 0 550 1000" className="App-four-list">
-                        <Element />
-                    </svg>
-                    <svg viewBox="0 0 550 1000" className="App-five-list">
-                        <Element />
-                    </svg>
-
-                    <svg viewBox="0 0 550 1000" className="App-list-line">
-                        <ListLine />
+                    <svg viewBox="0 0 1800 1400" className="App-three-list">
+                        <ContainerList />
                     </svg>
 
                     <div className="App-general-label1">{num1}</div>
@@ -385,23 +371,35 @@ function App() {
 }
 
 function datePicker() {
+
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: '#a8d8ff'
+            }
+        },
+    });
+
     return (
         <div className="App-date-picker">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DateField
-                    sx={{
-                        input: { color: 'white' },
-                        label: { color: 'white' }
-                    }}
-                    id="dateField"
-                    label="Дата рождения"
-                    format="DD.MM.YYYY"
-                    focused
-                    InputLabelProps={{
-                        shrink: true
-                    }}
-                />
-            </LocalizationProvider>
+            <ThemeProvider theme={theme}>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DateField
+                        sx={{
+                            input: { color: 'white' },
+                            label: { color: 'white' }
+                        }}
+                        id="dateField"
+                        label="Дата рождения"
+                        format="DD.MM.YYYY"
+                        color="primary"
+                        focused
+                        InputLabelProps={{
+                            shrink: true
+                        }}
+                    />
+                </LocalizationProvider>
+            </ThemeProvider>
         </div>
     )
 }
