@@ -366,7 +366,7 @@
   }
 
   .App-general-label2 {
-    top: 130px;
+    top: 135px;
     right: 360px;
   }
 
@@ -376,7 +376,7 @@
   }
 
   .App-general-label4 {
-    top: 155px;
+    top: 160px;
     right: 360px;
   }
 
@@ -396,8 +396,8 @@
   }
 
   .App-general-label8 {
-    top: 50px;
-    right: 525px;
+    top: 48px;
+    right: 527px;
     font-size: 18px;
   }
 
@@ -413,16 +413,16 @@
 
   .App-general-label11 {
     top: 35px;
-    right: 530px;
+    right: 533px;
   }
 
   .App-general-label12 {
     top: 35px;
-    right: 513px;
+    right: 510px;
   }
 
   .App-general-label13 {
-    bottom: 0;
+    top: 5px;
     right: 565px;
     font-size: 18px;
   }
@@ -443,8 +443,8 @@
   }
 
   .App-general-label17 {
-    top: 50px;
-    right: 575px;
+    top: 48px;
+    right: 573px;
     font-size: 18px;
   }
 
@@ -454,7 +454,7 @@
   }
 
   .App-general-label19 {
-    top: 110px;
+    top: 115px;
     right: 700px;
   }
 
@@ -464,12 +464,12 @@
   }
 
   .App-general-label21 {
-    top: 155px;
+    top: 160px;
     right: 740px;
   }
 
   .App-general-label22 {
-    top: 130px;
+    top: 135px;
     right: 710px;
   }
 
@@ -490,8 +490,8 @@
   }
 
   .App-general-combo-label {
-    top: 185px;
-    right: 1040px;
+    top: 182px;
+    right: 1042px;
     font-size: 14px;
   }
 
@@ -506,7 +506,7 @@
   }
 
   .App-label2 {
-    bottom: 300px;
+    bottom: 293px;
     left: 25px;
     font-size: 20px;
   }
@@ -518,7 +518,7 @@
   }
 
   .App-label4 {
-    bottom: 235px;
+    bottom: 230px;
     left: 20px;
     font-size: 20px;
   }
@@ -536,7 +536,7 @@
   }
 
   .App-combo-label {
-    bottom: 180px;
+    bottom: 200px;
     font-size: 15px;
     left: 5px;
   }
@@ -565,6 +565,7 @@
   }
   .App-text-style {
     margin-left: 90px;
+    margin-top: -50px;
   }
   .App-list-general {
     grid-template-columns: 8% 20%;

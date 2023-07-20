@@ -207,7 +207,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div style={{marginTop: '70px'}} className="App-text-style">
+                <div className="App-text-style">
                     Сфера<br/>ОСОЗНАННОСТИ
                     <div className="App-list-general">
                         <div>
@@ -235,7 +235,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div style={{marginTop: '70px'}} className="App-text-style">
+                <div className="App-text-style">
                     Сфера<br/>РЕАЛИЗАЦИИ ДЕНЕГ
                     <div className="App-list-general">
                         <div>
@@ -265,7 +265,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div style={{marginTop: '70px'}} className="App-text-style">
+                <div className="App-text-style">
                     Сфера ОТНОШЕНИЙ
                     <div className="App-list-general">
                         <div>
@@ -294,7 +294,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div style={{marginTop: '70px'}} className="App-text-style">
+                <div className="App-text-style">
                     Сфера ЗДОРОВЬЯ
                     <div className="App-list-general">
                         <div>
@@ -323,7 +323,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div style={{marginTop: '70px'}} className="App-text-style">
+                <div className="App-text-style">
                     <label>Родовые ошибки</label>
                     <div style={{marginTop: 2}} className="App-text-lower-style">
                         <br/>
