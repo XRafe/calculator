@@ -179,7 +179,7 @@ function App() {
                     <div className="App-general-combo-label">{num26} {num27} {num28}</div>
                 </div>
 
-                <div style={{marginTop: '350px'}} className="App-text-style">
+                <div style={{marginTop: '480px'}} className="App-text-style">
                     Сфера<br/>ИНДИВИДУАЛЬНОСТИ
                     <div className="App-list-general">
                         <div>
@@ -207,7 +207,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="App-text-style">
+                <div style={{marginTop: '100px'}} className="App-text-style">
                     Сфера<br/>ОСОЗНАННОСТИ
                     <div className="App-list-general">
                         <div>
@@ -235,7 +235,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="App-text-style">
+                <div style={{marginTop: '100px'}} className="App-text-style">
                     Сфера<br/>РЕАЛИЗАЦИИ ДЕНЕГ
                     <div className="App-list-general">
                         <div>
@@ -265,7 +265,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="App-text-style">
+                <div style={{marginTop: '100px'}} className="App-text-style">
                     Сфера ОТНОШЕНИЙ
                     <div className="App-list-general">
                         <div>
@@ -294,7 +294,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="App-text-style">
+                <div style={{marginTop: '100px'}} className="App-text-style">
                     Сфера ЗДОРОВЬЯ
                     <div className="App-list-general">
                         <div>
@@ -323,7 +323,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="App-text-style">
+                <div style={{marginTop: '100px'}} className="App-text-style">
                     <label>Родовые ошибки</label>
                     <div style={{marginTop: 2}} className="App-text-lower-style">
                         <br/>
