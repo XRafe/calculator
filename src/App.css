@@ -574,13 +574,19 @@
   }
 }
 
-@media screen and (max-width : 414px) {
+@media screen and (min-width : 375px) and (max-width : 389px) {
+  .App-list-container {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width : 390px) and (max-width : 413px) {
   .App-list-container {
     margin-left: 30px;
   }
 }
 
-@media screen and (max-width : 430px) and (min-width: 414px){
+@media screen and (min-width : 414px) and (max-width : 430px) {
   .App-list-container {
     margin-left: 40px;
   }
